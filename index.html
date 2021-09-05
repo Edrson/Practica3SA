@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+<title>Practica 1</title>
+<link rel="stylesheet" href="estilos.css" />
+<script src = "Saludo.js"></script>
+</head>
+ 
+<body>
+    <nav>
+        <img src="logo.png" width="500" height="100"/>
+	</nav>
+	<script>
+		var valorname;
+	</script>
+	<input type="text" name="nombre" onchange="valorname = Saludar(this.value)">
+	<input type="button" value="Saludar" onclick = "alert(valorname)"/> 
+</body>
+</html>
