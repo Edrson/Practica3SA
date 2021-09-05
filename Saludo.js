@@ -6,5 +6,5 @@ exports.addsaludo = function (value1) {
 
 function Saludar(v) {
   v1 = parseInt(v);
-  return "Hola " + v + " como estas";
+  return "Hola amigo " + v + " como estas";
 }

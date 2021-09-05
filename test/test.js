@@ -10,7 +10,7 @@ describe("Testing Saludo: ", function () {
   describe("Check addTest Function", function () {
     it("Check the returned value using : assert.equal(value, value): ", function () {
       result = cal.addsaludo("");
-      assert.equal("Hola como estass", result);
+      assert.equal("Hola como estas", result);
     });
   });
 });
