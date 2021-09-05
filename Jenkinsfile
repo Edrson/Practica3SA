@@ -13,15 +13,15 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh 'npm install'
-         sh '<<Build Command>>'
+        bat 'npm install'
+        
       }
     }  
     
             
     stage('Test') {
       steps {
-        sh 'npm run test'
+        bat 'npm run test'
       }
     }
   }
