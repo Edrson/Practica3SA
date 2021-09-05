@@ -1,23 +1,27 @@
 pipeline {
   agent any
-  tools {nodejs "latest"}
+    
+  tools {nodejs "node"}
+    
   stages {
-    stage('preflight') {
+        
+    stage('Git') {
       steps {
-        echo sh(returnStdout: true, script: 'env')
-        sh 'node -v'
+        git 'https://github.com/Edrson/Practica3SA'
       }
     }
-    stage('build') {
+     
+    stage('Build') {
       steps {
-        sh 'npm --version'
-        sh 'git log --reverse -1'
         sh 'npm install'
+         sh '<<Build Command>>'
       }
-    }
-    stage('test') {
+    }  
+    
+            
+    stage('Test') {
       steps {
-        sh 'npm test'
+        sh 'npm run test'
       }
     }
   }
